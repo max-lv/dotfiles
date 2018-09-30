@@ -46,10 +46,8 @@ workspace 6 output $monitor2
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec --no-startup-id  urxvt -c "/usr/bin/zsh" -i -t -e sh
-# bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/zsh
-bindsym $mod+Return exec --no-startup-id  termite
-bindsym $mod+Shift+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id  alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
