@@ -13,6 +13,7 @@ for_window [class="(?i)gucharmap"] floating enable
 for_window [class="(?i)dde-file-manager"] floating enable
 for_window [class="(?i)gitk"] floating enable
 for_window [class="(?i)love"] floating disable
+for_window [class="(?i)steam" title="Friends List"] floating enable
 
 
 
@@ -183,9 +184,10 @@ exec --no-startup-id xset s off
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
 bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display-window " "
 
-# #Screenshot
+# Screenshot
 # bindsym $mod+Shift+s exec --no-startup-id "scrot -q 95 ~/Imagens/Screenshot-%Y-%m-%d%H:%M:%S.png"
-# bindsym Print exec --no-startup-id "scrot -q 95 ~/Imagens/Screenshot-%Y-%m-%d%H:%M:%S.png"
+# bindsym $mod+Shift+s exec --no-startup-id "scrot --select /tmp/what.png"
+bindsym --release Print exec --no-startup-id "scrot '/tmp/%F_%T_$wx$h.png' --select --exec 'xclip -selection clipboard -target image/png $f && rm $f'"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
